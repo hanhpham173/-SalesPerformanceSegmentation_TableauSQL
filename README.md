@@ -18,6 +18,8 @@ To build a multi-layered sales analysis dashboard that helps stakeholders:
 ## 📊 Dashboard Features
 
 ![Dashboard Screenshot – Sales by Product & Region](sc1.JPG)  
+
+
 ![Dashboard Screenshot – Customer & Quantity Distribution](sc2.JPG)
 
 ### 1. Revenue Breakdown  
