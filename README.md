@@ -1,99 +1,106 @@
 # 📦 Sales Performance & Segmentation Dashboard – Tableau + SQL Project
 
 ## 📊 Overview  
-This project combines Tableau dashboards with SQL analysis to explore sales performance across products, customers, and geographies. The dashboards provide insight into **product-level revenue**, **deal sizes**, **monthly performance**, and **RFM customer segmentation** using real transactional data.
+This project combines **SQL-based data analysis** with **Tableau dashboards** to deliver a comprehensive view of sales performance and customer behavior. It includes product-level revenue breakdowns, regional sales trends, deal size analysis, and RFM-based customer segmentation — providing valuable insights to boost sales strategies and customer retention.
 
 ---
 
 ## 🎯 Project Objective  
-To build a multi-layered sales analysis dashboard that helps stakeholders:
-
-- Monitor sales by product line, region, and customer  
-- Identify high-performing categories and deal sizes  
-- Understand customer behavior via RFM segmentation  
-- Discover sales opportunities and churn risks
+To analyze sales trends, understand customer value, and build segmentation models using RFM logic — enabling smarter targeting, sales forecasting, and business growth planning.
 
 ---
 
-## 📊 Dashboard Features
+## 🔍 SQL-Driven Analysis  
+The backend logic of the project is powered by SQL (`RFM_Segmentation_Sales.sql`), which prepares data for Tableau by:
 
-![Dashboard Screenshot – Sales by Product & Region](sc1.JPG)  
-
-
-![Dashboard Screenshot – Customer & Quantity Distribution](sc2.JPG)
-
-### 1. Revenue Breakdown  
-- **Revenue by Product Line**: Bubble chart showing top-selling categories (e.g., Classic Cars, Vintage Cars)  
-- **Revenue by Status**: Identifies that most revenue comes from shipped orders  
-- **Revenue by Country**: Highlights top markets like USA, France, and UK
-
-### 2. Sales Distribution  
-- **Sales by Deal Size**: Compares performance of Medium, Small, and Large deals  
-- **Sales by Product Line and Year**: Trends across multiple years (2003–2005)  
-- **Monthly Sales by Country**: Seasonal breakdown of revenue contribution
-
-### 3. Customer Insights  
-- **Quantity Distribution**: Frequency of items ordered by bin  
-- **Customer Distribution by Country**: Identifies best buyers by region  
-- **Sales Distribution**: Histogram of sales volume per transaction
+- Performing **RFM segmentation** based on:
+  - **Recency** (last purchase date)
+  - **Frequency** (number of transactions)
+  - **Monetary** (total amount spent)
+- Assigning customer labels:
+  - `loyal`, `active`, `new customers`, `slipping away`, `lost customers`, `potential churners`
+- Aggregating sales by:
+  - Year, product line, deal size, country, order status
+- Optimizing data structure for visualization and dashboard filters
 
 ---
 
-## 📌 RFM Segmentation Logic (SQL)
+## 📊 Dashboard Features  
 
-This project also includes a comprehensive **RFM analysis** done in SQL using the `sales_data_sample` dataset. The segments include:
+![Dashboard Screenshot – Sales Overview](sc1.JPG)  
 
-- `loyal`: Repeat buyers with high value  
-- `active`: Recently active with frequent purchases  
-- `new customers`: New entrants with strong initial orders  
-- `slipping away`: Big spenders at risk of churn  
-- `lost_customers`: Long inactive with past purchase history  
-- `potential churners`: Mid-range value, declining activity
 
-SQL queries cover grouping by product, year, country, deal size, customer frequency, and sales combinations.
+![Dashboard Screenshot – Customer Distribution](sc2.JPG)
+
+
+### 1. 💰 Revenue Breakdown  
+- **Product Line Performance** – Classic Cars and Vintage Cars lead in revenue  
+- **Revenue by Status** – Majority comes from shipped orders  
+- **Country-wise Revenue** – USA, France, and UK are top-performing markets
+
+### 2. 📦 Sales Distribution  
+- **Deal Size** – Medium-sized deals dominate overall performance  
+- **Yearly & Monthly Trends** – Revenue patterns from 2003 to 2005, highlighting Q4 peaks  
+- **Sales Volume Histogram** – Distribution of order quantities
+
+### 3. 🧍 Customer Insights  
+- **RFM Segmentation** displayed visually in Tableau  
+- **Top Customers by Country**  
+- **Quantity Distribution** grouped by bins (low to bulk orders)
 
 ---
 
-## 🧠 Key Insights
+## 📈 Key Insights  
 
-- 📌 **Classic Cars** are the most profitable product line  
-- 📊 **Medium-size deals** dominate overall sales volume  
-- 🌍 **USA** leads in revenue, followed by France and UK  
-- 🧮 **RFM Segmentation** helps prioritize loyalty programs and recovery campaigns  
-- 📈 **November** is consistently the best-performing month across years
+- 🏆 **Classic Cars** are consistently the top-selling product line  
+- 🌍 **USA, France, and UK** drive the majority of global revenue  
+- 📦 **Medium-sized deals** contribute the most to total sales  
+- 📅 **November** is the most profitable month across all years  
+- 📊 **RFM analysis** identifies loyal vs. at-risk customers for personalized marketing
 
 ---
 
-## 📌 Recommendations
+## 📌 Recommendations  
 
-1. **Promote Best-Selling Product Lines**  
-   Focus marketing on Classic & Vintage Cars.
+1. **Target Loyal Customers**  
+   Reinforce retention with loyalty rewards and exclusive offers.
 
-2. **Target Medium-Sized Deal Segments**  
-   Maintain inventory and sales focus here for volume and margin.
+2. **Revive At-Risk Segments**  
+   Engage `slipping away` and `lost` customers with reactivation campaigns.
 
-3. **Use RFM to Drive CRM**  
-   Customize email/discount campaigns for loyal and at-risk segments.
+3. **Optimize Stock for Medium Deals**  
+   Align product availability to meet the most active deal size segment.
 
-4. **Seasonal Preparation**  
-   November is a high-revenue month — prep stock and marketing accordingly.
+4. **Boost Seasonal Sales**  
+   Launch high-impact campaigns in November based on past performance.
 
-5. **Optimize for Top Countries**  
-   Localize campaigns in the US, France, and the UK.
+5. **Focus on Top Geographies**  
+   Localize marketing for high-revenue regions like the US and France.
+
+---
+
+## ✅ Conclusion  
+This project demonstrates proficiency in both:
+
+- ✅ SQL data wrangling and business segmentation  
+- ✅ Tableau visualization and dashboard storytelling  
+- ✅ End-to-end pipeline from raw data to executive-ready insights  
+- ✅ Real-world business application: performance monitoring and CRM targeting
 
 ---
 
 ## 🛠️ Tools Used  
-- Tableau Desktop (`.twbx`)  
-- SQL Server / SSMS for querying  
-- Dataset: `sales_data_sample` (structured e-commerce transaction data)
+- **SQL Server / MySQL** – Data aggregation, transformation, and segmentation  
+- **Tableau Desktop** – Dashboard design and interactive filtering  
+- **Jupyter Notebook (optional)** – For supplementary EDA or automation  
+- **Dataset** – `sales_data_sample`
 
 ---
 
 ## 📎 Files Included
 
 ```markdown
-- `Sales Dashboard.twbx` – Tableau workbook with all dashboard pages  
-- `RFM_Segmentation_Sales.sql` – SQL file containing customer segmentation and sales queries  
-- `sc1.JPG` – Dashboard screenshot: product, deal size, and country revenue  
-- `sc2.JPG` – Dashboard screenshot: customer-level distribution and segmentation  
+- `Sales Dashboard.twbx` – Tableau workbook with all visualizations  
+- `RFM_Segmentation_Sales.sql` – SQL queries for RFM segmentation and sales aggregation  
+- `sc1.JPG` – Screenshot: Revenue breakdown by product, country, and year  
+- `sc2.JPG` – Screenshot: Customer segmentation and distribution analysis  
